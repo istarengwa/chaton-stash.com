@@ -9,3 +9,11 @@ require 'faker'
       image_url: Faker::LoremFlickr.image(size: "300x300", search_terms: ['cat']), 
     )
   end
+
+  user = User.create!(
+  email_address: "rails@admin.com",
+  password: "123456",
+  password_confirmation: "123456",
+  first_name: "Chaton",
+  last_name: "Fan"
+)
