@@ -10,12 +10,12 @@ class SessionsController < ApplicationController
       start_new_session_for user
       redirect_to after_authentication_url, notice: "Connexion réussie !"
     else
-      redirect_to new_session_path, alert: "Email ou mot de passe invalide"
+      redirect_to new_sessions_path, alert: "Email ou mot de passe invalide"
     end
   end
 
   def destroy
     terminate_session
-    redirect_to new_session_path, notice: "Déconnecté avec succès !"
+    redirect_to new_sessions_path, notice: "Déconnecté avec succès !"
   end
 end
