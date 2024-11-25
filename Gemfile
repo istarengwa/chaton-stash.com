@@ -64,3 +64,4 @@ end
 
 gem "stripe"
 gem "actionmailer"
+gem "faker"
