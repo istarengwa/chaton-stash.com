@@ -1,0 +1,12 @@
+<h1>Je suis l'index du site</h1>
+
+<h2>Photos de Chats</h2>
+
+<% @items.each do |item| %>
+  <div>
+    <h2><%= item.name %></h2>
+    <p><%= item.description %></p>
+    <p>Prix : <%= number_to_currency(item.price) %></p>
+    <p>Stock : <%= item.stock %> disponibles</p>
+  </div>
+<% end %>
