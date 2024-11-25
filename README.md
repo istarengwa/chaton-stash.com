@@ -63,6 +63,7 @@ The app is deployed on fly.io (link coming)
 ### Screenshots and demo
 
 
+---
 
 ## Français
 
