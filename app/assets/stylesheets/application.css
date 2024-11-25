@@ -1,4 +1,18 @@
 @import "~bootstrap/scss/bootstrap";
+
+footer {
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css.
  *
