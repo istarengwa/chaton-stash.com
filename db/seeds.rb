@@ -10,15 +10,15 @@ require 'faker'
 #   )
 # end
 
-# Créer 10 utilisateurs fictifs
-10.times do
-  User.create(
-    email_address: Faker::Internet.email,
-    password_digest: BCrypt::Password.create('password'),
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name
-  )
-end
+# # Créer 10 utilisateurs fictifs
+# 10.times do
+#   User.create(
+#     email_address: Faker::Internet.email,
+#     password_digest: BCrypt::Password.create('password'),
+#     first_name: Faker::Name.first_name,
+#     last_name: Faker::Name.last_name
+#   )
+# end
 
 # Créer 10 produits fictifs
 10.times do
