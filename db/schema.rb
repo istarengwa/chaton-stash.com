@@ -64,6 +64,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
+
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "items"
   add_foreign_key "carts", "users"
