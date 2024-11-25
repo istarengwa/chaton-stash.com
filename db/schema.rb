@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
-  create_table "cart_items", force: :cascade do |t|
+  create_table "cart_items", id: false, force: :cascade do |t|
     t.integer "cart_id", null: false
     t.integer "item_id", null: false
     t.datetime "created_at", null: false
@@ -39,6 +39,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id", null: false
+    t.string "status"
     t.decimal "total_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -63,7 +64,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
     t.string "last_name"
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
-
 
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "items"
