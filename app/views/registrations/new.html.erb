@@ -1,9 +1,27 @@
-<%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
-<%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
+<h1>Signup form</h1>
 
-<%= form_with url: session_path do |form| %>
-  <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "Enter your email address", value: params[:email_address] %><br>
-  <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: "Enter your password", maxlength: 72 %><br>
-  <%= form.submit "S'inscrire" %>
-<% end %>
+<%= form_tag registrations_path(action: "create"), method: "post" do%>
+
+<%= label_tag :prénom %>
+<%= text_field_tag :first_name %>
 <br>
+
+<%= label_tag :nom_de_famille %>
+<%= text_field_tag :last_name %>
+<br>
+
+<%= label_tag :addresse_mail %>
+<%= text_field_tag :email_address %>
+<br>
+
+
+<%= label_tag :mot_de_passe %>
+<%= password_field_tag :password%>
+<br>
+
+<%= label_tag :confirmer_le_mot_de_passe %>
+<%= password_field_tag :password_confirmation%>
+
+<%= submit_tag "S'inscrire"%>
+
+<% end %>
