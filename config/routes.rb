@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  get "home/index"
 
-  get "pages/contact"    # IL FAUT QUE CA DEGAGE
+
+  get "pages/contact"    # IL FAUT QUE CA DEGAGE 
   
   resource :session, only: %i[new create destroy]
   resource :registration, only: %i[new create]
   resources :users
   resources :items
   resources :passwords, param: :token
+
 
   get "/contact", to: "pages#contact", as: :contact
 
