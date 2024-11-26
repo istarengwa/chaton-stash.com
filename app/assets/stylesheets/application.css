@@ -13,6 +13,31 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.rightNavbar {
+  fle: end;
+}
+
+.flash-messages {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.flash-message {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.flash-message.notice {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.flash-message.alert {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css.
  *
