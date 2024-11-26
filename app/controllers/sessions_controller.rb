@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
 
   def create
     if user = User.authenticate_by(params.permit(:email_address, :password))
-      p user
       start_new_session_for user
       redirect_to after_authentication_url, notice: "Connexion réussie !"
     else
@@ -22,6 +21,6 @@ class SessionsController < ApplicationController
     Rails.logger.debug "Destroy action triggered"
     terminate_session
     Rails.logger.debug "Session terminated"
-    redirect_to new_session_path, notice: "Déconnecté avec succès !"
+    redirect_to root_path, notice: "Déconnecté avec succès !"
   end
 end
