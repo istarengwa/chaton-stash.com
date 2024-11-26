@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users
   resources :items
   resources :passwords, param: :token
+  resource :cart, only: [:show, :update, :destroy] # resource car un seul panier par user
 
 
   get "/contact", to: "pages#contact", as: :contact
