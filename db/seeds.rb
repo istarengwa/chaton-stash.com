@@ -10,15 +10,15 @@ require 'faker'
 #   )
 # end
 
-# # Créer 10 utilisateurs fictifs
-# 10.times do
-#   User.create(
-#     email_address: Faker::Internet.email,
-#     password_digest: BCrypt::Password.create('password'),
-#     first_name: Faker::Name.first_name,
-#     last_name: Faker::Name.last_name
-#   )
-# end
+#Créer 10 utilisateurs fictifs
+10.times do
+  User.create(
+    email_address: Faker::Internet.email,
+    password_digest: BCrypt::Password.create('password'),
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name
+  )
+end
 
 # Créer 10 produits fictifs
 10.times do
@@ -35,7 +35,7 @@ end
 # Créer 4 paniers fictifs associés à des utilisateurs
 5.times do
   user = User.all.sample
-  cart = Cart.create(user: user)
+  cart = Cart.create!(user: user)
 
   # Ajouter des items (produits) au panier (via la table cart_items)
   rand(1..10).times do
