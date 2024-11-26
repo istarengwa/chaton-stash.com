@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+    <%= javascript_importmap_tags %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -23,6 +24,7 @@
   </head>
 
   <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <%= link_to "Chaton Stash", root_path, class: "navbar-brand" %>
@@ -42,6 +44,18 @@
       </div>
     </nav>
     
+<!--
+    <%= link_to 'home', root_path %>
+    <%= button_to 'Sign In', new_session_path %>
+    <% if authenticated? %>
+    <%= link_to 'Profil', user_path(Current.session.user_id) %>
+      <%= Current.session %>
+      <%= Current.user.email_address %>
+      <%= button_to 'Sign Out', session_path(Current.session), method: :delete %>
+    <% end %>
+-->
+
+
     <%= yield %>
 
     <footer class="bg-light text-center text-lg-start mt-5">

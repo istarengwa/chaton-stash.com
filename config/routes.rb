@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+
   get "pages/contact"    # IL FAUT QUE CA DEGAGE 
-  resource :session, only: [:new, :create, :destroy]
+  
+  resources :sessions, only: [:new, :create, :destroy] 
+
+
   resources :users
   resources :items
   resources :passwords, param: :token
@@ -21,5 +25,4 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
 
   root "items#index"
-
 end
