@@ -26,21 +26,19 @@
        
       <% end %>
     </div>
-  </nav>
-</body>
+</nav>
 
 <!-- Notice and Alert Messages -->
-<div class="flash-messages">
-  <% if flash[:alert] %>
-    <div class="flash-message alert">
-      <%= flash[:alert] %>
-    </div>
+  <div class="flash-messages">
+    <% if flash[:alert] %>
+      <div class="flash-message alert">
+        <%= flash[:alert] %>
+      </div>
   <% end %>
-  <% if flash[:notice] %>
-    <div class="flash-message notice">
-      <%= flash[:notice] %>
-    </div>
-  <% end %>
-</div>
-</nav>
-</html>
+    <% if flash[:notice] %>
+      <div class="flash-message notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+  </div>
+</body>
