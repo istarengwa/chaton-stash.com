@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users
   resources :items
   resources :passwords, param: :token
-  resources :registrations
+
 
   get "/contact", to: "pages#contact", as: :contact
 
