@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :sessions
+  resources :sessions, only: [:new, :create, :destroy] 
+
   resources :users
   resources :items
   resources :passwords, param: :token
@@ -16,5 +17,4 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
 
   root "items#index"
-
 end
