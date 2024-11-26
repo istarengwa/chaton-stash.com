@@ -1,5 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 
+
+body {
+  background-color: #FAEAE6;
+}
+
 footer {
   padding: 20px 0;
   font-size: 14px;
@@ -13,17 +18,14 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.rightNavbar {
-  fle: end;
-}
-
 .flash-messages {
-  margin: 10px 0;
-  padding: 10px;
+  margin: 0px 0;
+  padding: 0px;
+  text-align: center;
 }
 
 .flash-message {
-  padding: 10px;
+  padding: 0px;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -38,13 +40,60 @@ footer a:hover {
   color: #721c24;
 }
 
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white; 
+  border-radius: 15px;
+  font-family: Arial, sans-serif;
+  margin: 20px 20px 20px 20px;
+  box-shadow:  0px 0px 0.8em 0.3em grey;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+ .button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #79A3B7;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+}
+
+.button-link:active {
+  background-color: #003f7f;
+}
