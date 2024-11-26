@@ -54,6 +54,7 @@ end
   # Associer des produits à chaque commande via la table items
   rand(1..10).times do
     item = Item.all.sample
+    cart = Cart.all.sample
     CartItem.create(cart: cart, item: item) # Ou associer à une autre logique pour les commandes
   end
 end
