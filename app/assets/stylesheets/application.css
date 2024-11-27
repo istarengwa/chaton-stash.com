@@ -216,7 +216,7 @@ main {
 }
 
 .submit-button {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   background-color: #8aa7b3;
   color: white;
@@ -224,6 +224,7 @@ main {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin-left: 45px;
 }
 
 .submit-button:hover {
