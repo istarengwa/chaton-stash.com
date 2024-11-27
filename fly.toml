@@ -12,7 +12,7 @@ console_command = '/rails/bin/rails console'
   PORT = "8080"
 
 [deploy]
-  release_command = "bin/rails db:migrate"
+  release_command = "bin/bundle exec rake db:migrate"
 
 [http_service]
   internal_port = 8080
