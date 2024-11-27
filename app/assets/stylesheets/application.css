@@ -1,21 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
 
 
+
 body {
   background-color: #FAEAE6;
-}
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; 
 
-footer {
-  padding: 20px 0;
-  font-size: 14px;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+main {
+  flex: 1; 
 }
 
 .flash-messages {
@@ -97,3 +92,93 @@ footer a:hover {
 .button-link:active {
   background-color: #003f7f;
 }
+
+.footer {
+  background-color: #F6DAD2; 
+  font-family: Arial, sans-serif;
+  color: black;
+  text-align: center;
+  margin-top: 15px ;
+  
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+
+.footer-follow h4 {
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.social-icons  {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  padding-left: 15px;
+}
+
+.social-icons a:hover {
+  color: #8aa7b3; 
+}
+
+.footer-subscribe h4 {
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+.subscribe-input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 20px;
+  width: 200px;
+}
+
+.subscribe-button {
+  padding: 6px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8aa7b3; 
+  color: white;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.subscribe-button:hover {
+  background-color: #6c8c99; 
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1px 0;
+  background-color: #8aa7b3; 
+  color: white;
+  font-size: 8px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+

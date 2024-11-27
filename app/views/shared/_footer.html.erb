@@ -1,16 +1,27 @@
-    <footer class="bg-light text-center text-lg-start mt-5">
-      <div class="container p-4">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 mb-4">
-            <h5 class="text-uppercase">Chaton Stash</h5>
-            <p>
-              Le meilleur site pour acheter des photos de chatons adorables. Merci de nous faire confiance pour illuminer vos journées avec nos petits amis à fourrure.
-            </p>
-          </div>
-        </div>
-      </div>
+<footer class="footer">
 
-      <div class="text-center p-3 bg-secondary text-white">
-        © <%= Time.current.year %> Chaton Stash. Tous droits réservés.
-      </div>
-    </footer>
+<div class="footer-top">
+  <div class="footer-follow">
+    <h4>Follow Us</h4>
+    <div class="social-icons">
+
+    <%= link_to image_tag("fb.png"), "https://facebook.com" %>
+    <%= link_to image_tag("x.png"), "https://x.com" %>
+    <%= link_to image_tag("insta.png"), "https://instagram.com" %>
+    
+    </div>
+  </div>
+
+  <div class="footer-subscribe">
+    <h4>Subscribe</h4>
+    <form>
+      <input type="email" placeholder="Enter your email Address" class="subscribe-input" />
+      <button type="submit" class="subscribe-button">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  <p>&copy; 2024 All Rights Reserved</p>
+</div>
+</footer>
