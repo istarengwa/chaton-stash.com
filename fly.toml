@@ -12,6 +12,7 @@ console_command = '/rails/bin/rails console'
   PORT = "8080"
 
 [http_service]
+  processes = ["app"]
   internal_port = 8080
   force_https = true
   auto_stop_machines = 'stop'
@@ -24,3 +25,12 @@ console_command = '/rails/bin/rails console'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 1024
+
+[processes]
+  app = "bundle exec thrust ./bin/rails server"
+  solidq = "bundle exec rake solid_queue:start"
+
+[mounts]
+  source="data"
+  destination="/data"
+
