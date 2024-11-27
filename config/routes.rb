@@ -1,18 +1,10 @@
 Rails.application.routes.draw do
-
-
-  get "pages/contact"    # IL FAUT QUE CA DEGAGE 
-  
   resource :session, only: %i[new create destroy]
   resource :registration, only: %i[new create]
   resources :users
   resources :items
   resources :passwords, param: :token
-
-
-  get "/contact", to: "pages#contact", as: :contact
-
-  
+  resources :pages
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

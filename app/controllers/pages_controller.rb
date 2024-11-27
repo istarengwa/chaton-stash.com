@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
   allow_unauthenticated_access
-  def contact
+
+
+  def show
+    render params[:id]
   end
 end
