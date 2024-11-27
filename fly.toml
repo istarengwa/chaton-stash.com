@@ -11,9 +11,6 @@ console_command = '/rails/bin/rails console'
   RAILS_ENV = "production"
   PORT = "8080"
 
-[deploy]
-  release_command = "bin/bundle exec rake db:migrate"
-
 [http_service]
   internal_port = 8080
   force_https = true
