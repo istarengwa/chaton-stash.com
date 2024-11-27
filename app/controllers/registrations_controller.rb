@@ -13,7 +13,7 @@ class RegistrationsController < ApplicationController
       start_new_session_for(@user)
       redirect_to root_path, notice: "Insciption Réussie"
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity 
     end
   end
 

@@ -179,3 +179,68 @@ main {
   text-decoration: underline;
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.login-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); 
+  width: 100%;
+  max-width: 400px; 
+}
+
+.form-field {
+  margin-bottom: 15px; 
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.form-input:focus {
+  border-color: #8aa7b3; 
+  outline: none;
+}
+
+.submit-button {
+  width: 80%;
+  padding: 10px;
+  background-color: #8aa7b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 45px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3; 
+}
+
+.forgot-password {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+  font-size: 12x;
+}
+
+.forgot-password-link {
+  color: #8aa7b3;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+

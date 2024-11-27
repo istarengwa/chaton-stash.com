@@ -1,27 +1,30 @@
-<h1>Signup form</h1>
+<div class="form-container">
 
-<%= form_tag registration_path(action: "create"), method: "post" do%>
+  <%= form_with url: registration_path(action: "create"), method: "post", class: "login-form" do |form| %>
+    <div class="form-field">
+      <%= form.text_field :first_name, required: true, autofocus: true, placeholder: "Prénom", maxlength: 72, class: "form-input" %>
+    </div>
 
-<%= label_tag :prénom %>
-<%= text_field_tag :first_name %>
-<br>
+    <div class="form-field">
+      <%= form.text_field :last_name, required: true, placeholder: "Nom de famille", maxlength: 72, class: "form-input" %>
+    </div>
 
-<%= label_tag :nom_de_famille %>
-<%= text_field_tag :last_name %>
-<br>
+    <div class="form-field">
+      <%= form.email_field :email_address, required: true, placeholder: "Adresse mail", maxlength: 72, class: "form-input" %>
+    </div>
 
-<%= label_tag :addresse_mail %>
-<%= text_field_tag :email_address %>
-<br>
+    <div class="form-field">
+      <%= form.password_field :password, required: true, placeholder: "Mot de passe", maxlength: 72, class: "form-input" %>
+    </div>
 
+    <div class="form-field">
+      <%= form.password_field :password_confirmation, required: true, placeholder: "Confirmer votre mot de passe", maxlength: 72, class: "form-input" %>
+    </div>
 
-<%= label_tag :mot_de_passe %>
-<%= password_field_tag :password%>
-<br>
+    <div class="form-submit">
+      <%= form.submit "S'inscrire", class: "submit-button" %>
+    </div>
 
-<%= label_tag :confirmer_le_mot_de_passe %>
-<%= password_field_tag :password_confirmation%>
+  <% end %> 
 
-<%= submit_tag "S'inscrire"%>
-
-<% end %>
+</div>
