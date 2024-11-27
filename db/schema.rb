@@ -20,6 +20,10 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
     t.index ["item_id"], name: "index_cart_items_on_item_id"
   end
 
+    # il faudra rajouter une colonne quantity dans le panier et dans la commande
+    # il faudra rajouter une table de liaison OrderItemS
+
+
   create_table "carts", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
@@ -31,7 +35,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
     t.string "name"
     t.text "description"
     t.decimal "price"
-    t.integer "stock"
+    t.integer "stock" #, default: 1, null: false # pour quand on gèrera les quantités
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
