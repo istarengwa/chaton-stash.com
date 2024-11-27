@@ -5,13 +5,16 @@ Rails.application.routes.draw do
   resource :session, only: %i[new create destroy]
   resource :registration, only: %i[new create]
   resources :users
-  resources :items
+  resources :items, only: [:index, :show]
   resources :passwords, param: :token
   resources :pages
-  resource :cart, only: [:show, :update, :destroy] # resource car un seul panier par user
+
+  resource :cart, only: [:show, :update, :destroy] do
+    post 'add_item/:item_id', to: 'carts#add_item', as: 'add_item'
+  end
 
 
-
+  resources :orders
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

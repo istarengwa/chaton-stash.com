@@ -4,3 +4,8 @@ import "controllers"
 
 import "bootstrap"
 import "../stylesheets/application" 
+
+
+// Importation de Rails UJS pour gérer les actions `method: :delete`
+import Rails from "@rails/ujs";
+Rails.start(); // Active les fonctionnalités d'UJS
