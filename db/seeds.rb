@@ -16,7 +16,6 @@ user = User.create!(
   password: "123456",
   password_confirmation: "123456",
   first_name: "Chaton",
-  last_name: "Fan",
-  role: 1
+  last_name: "Fan"
 )
 puts "User created: #{user.email_address}"
