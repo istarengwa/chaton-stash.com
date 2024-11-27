@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_26_191053) do
   create_table "cart_items", force: :cascade do |t|
     t.integer "cart_id", null: false
     t.integer "item_id", null: false
@@ -19,10 +19,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
     t.index ["cart_id"], name: "index_cart_items_on_cart_id"
     t.index ["item_id"], name: "index_cart_items_on_item_id"
   end
-
-    # il faudra rajouter une colonne quantity dans le panier et dans la commande
-    # il faudra rajouter une table de liaison OrderItemS
-
 
   create_table "carts", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -35,7 +31,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
     t.string "name"
     t.text "description"
     t.decimal "price"
-    t.integer "stock" #, default: 1, null: false # pour quand on gèrera les quantités
+    t.integer "stock"
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -66,6 +62,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_25_162328) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
+    t.integer "role", default: 0
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
