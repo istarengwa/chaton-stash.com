@@ -8,6 +8,8 @@ primary_region = 'cdg'
 console_command = '/rails/bin/rails console'
 
 [build]
+  RAILS_ENV = "production"
+  PORT = "8080"
 
 [http_service]
   internal_port = 8080
